@@ -47,6 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addUser.Designer.cs">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminLink1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminLink1.Designer.cs">
+      <DependentUpon>adminLink1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminLink2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminLink2.Designer.cs">
+      <DependentUpon>adminLink2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminWindow.Designer.cs">
+      <DependentUpon>adminWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="companyLink1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="companyLink1.Designer.cs">
+      <DependentUpon>companyLink1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee_Info_Data.cs" />
     <Compile Include="EmployeeInfo.cs" />
     <Compile Include="Form1.cs">
@@ -61,35 +91,85 @@
     <Compile Include="employeeWindow.Designer.cs">
       <DependentUpon>employeeWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterLink1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="masterLink1.Designer.cs">
+      <DependentUpon>masterLink1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="masterWindow.Designer.cs">
+      <DependentUpon>masterWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePassword.Designer.cs">
+      <DependentUpon>updatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateUser.Designer.cs">
+      <DependentUpon>updateUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addUser.resx">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminLink1.resx">
+      <DependentUpon>adminLink1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminLink2.resx">
+      <DependentUpon>adminLink2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminWindow.resx">
+      <DependentUpon>adminWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="companyLink1.resx">
+      <DependentUpon>companyLink1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employeeWindow.resx">
       <DependentUpon>employeeWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <EmbeddedResource Include="masterLink1.resx">
+      <DependentUpon>masterLink1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="masterWindow.resx">
+      <DependentUpon>masterWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePassword.resx">
+      <DependentUpon>updatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateUser.resx">
+      <DependentUpon>updateUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

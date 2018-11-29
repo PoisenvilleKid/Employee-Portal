@@ -15,7 +15,7 @@ namespace SE_Final2
     // This is the code for the Login Page. This is the catalyst for the other windows in the portal
     public partial class Form1 : Form
     {
-        public EmployeeInfo fred = new EmployeeInfo(); // Object to hold the Employee's info when they log in
+        public EmployeeInfo userInfo = new EmployeeInfo(); // Object to hold the Employee's info when they log in
         MySqlCommand cmd;
         MySqlDataReader dataReader;
 
@@ -62,12 +62,12 @@ namespace SE_Final2
             // assigns values from Database to the EmployeeInfo Object
             while (dataReader.Read())
             {
-                fred.Employee_ID = ((int)dataReader.GetValue(0));
-                fred.Role = dataReader.GetValue(1).ToString();
-                fred.Username = dataReader.GetValue(2).ToString();
-                fred.Password = dataReader.GetValue(3).ToString();
-                fred.First_Name = dataReader.GetValue(4).ToString();
-                fred.Last_Name = dataReader.GetValue(5).ToString();
+                userInfo.Employee_ID = ((int)dataReader.GetValue(0));
+                userInfo.Role = dataReader.GetValue(1).ToString();
+                userInfo.Username = dataReader.GetValue(2).ToString();
+                userInfo.Password = dataReader.GetValue(3).ToString();
+                userInfo.First_Name = dataReader.GetValue(4).ToString();
+                userInfo.Last_Name = dataReader.GetValue(5).ToString();
             }
 
             // If the users information provided is not found in the Database, alert user they entered the wrong information
@@ -80,14 +80,14 @@ namespace SE_Final2
             // If the users credentials check out, redirect them to the appropriate window according to their Role
             else
             {
-                string role = fred.Role;
+                string role = userInfo.Role;
                 switch(role)
                 {
                     case "Master Admin":
                         open_master_admin_form(); break;
                     case "Admin":
                         open_admin_form();break;
-                    case "Employee":
+                    case "employee":
                         open_employee_form(); break;
 
                 }
@@ -97,22 +97,25 @@ namespace SE_Final2
             myConnection.Close();
         }
 
-        // If the authenticated user;s role is the master admin, this method redirectcs that user to the approriate window
+        // If the authenticated user's role is the master admin, this method redirectcs that user to the approriate window
         public void open_master_admin_form()
         {
-
+            masterWindow window = new masterWindow(userInfo);
+            window.Show();
         }
 
         // If the authenticated user's role is an admin, this method redirects that user to the appropriate window
         public void open_admin_form()
         {
-
+            adminWindow window = new adminWindow(userInfo);
+            window.Show();
         }
 
         // If the authenticated user's role is an employee, this method redirects that user to the appropriate Window
         public void open_employee_form()
         {
-            employeeWindow window = new employeeWindow(fred);
+
+            employeeWindow window = new employeeWindow(userInfo);
             window.Show();
         }
 
